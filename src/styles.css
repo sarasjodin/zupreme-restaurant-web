@@ -103,6 +103,52 @@ nav a {
     var(--bg);
 }
 
+button,
+a {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Buttons */
+.button,
+.theme-toggle,
+.hero-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--text);
+  cursor: pointer;
+  background-color: var(--surface);
+  transition: background-color 0.2s ease;
+}
+
+.button {
+  margin: 2rem 0;
+  padding: 0.875rem 1.5rem;
+}
+
+.hero-button {
+  margin-top: 45px;
+}
+
+.button:hover,
+.theme-toggle:hover,
+.hero-button:hover {
+  background-color: transparent;
+}
+
+.cta {
+  grid-column: 1 / -1;
+  justify-self: center;
+}
+
 .page-section {
   min-height: 90svh;
 
