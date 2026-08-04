@@ -1,15 +1,159 @@
 <!doctype html>
-<html lang="en">
+<html lang="sv">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image" href="/favicon.ico" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+    <meta
+      name="description"
+      content="Zuprême – L'Art de la Soupe. Franskinspirerade soppor, modern meny och tydlig smakprofil."
+    />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>zupreme-restaurant-web</title>
+
+    <title>Zuprême – L'Art de la Soupe</title>
   </head>
+
   <body>
-    <div id="app">
-      <h1>Zupreme</h1>
-    </div>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Zuprême – startsida">
+        <img
+          class="brand-logo"
+          src="/logo.svg"
+          width="45"
+          height="45"
+          alt="Zuprême"
+        />
+      </a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Öppna meny"
+        aria-expanded="false"
+        aria-controls="main-menu"
+      >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+
+      <nav class="main-nav" aria-label="Huvudnavigation">
+        <ul id="main-menu" class="nav-menu">
+          <li><a href="#about">Om oss</a></li>
+          <li><a href="#menu">Meny</a></li>
+          <li><a href="#contact">Kontakta oss</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="app" class="site-main">
+      <section id="hero" class="hero section page-section">
+        <div class="hero-content">
+          <p class="eyebrow">L'Art de la Soupe</p>
+          <h1 class="site-name">Zuprême</h1>
+          <p class="hero-text">
+            Soppor med fransk elegans, modern meny och tydlig smakprofil.
+          </p>
+          <a class="button hero-button" href="#menu"> Se menyn </a>
+        </div>
+      </section>
+
+      <section id="about" class="section page-section about-section">
+        <div class="section-heading">
+          <p class="eyebrow">Om Zuprême</p>
+          <h2>Fransk lantkänsla möter modern restaurang.</h2>
+        </div>
+        <p>
+          Zuprême är ett fiktivt soppkoncept där varje rätt presenteras med
+          tydlig temperatur, styrka och visuell identitet. Menyn hämtas
+          dynamiskt från ett API och kan uppdateras via ett skyddat adminsystem.
+        </p>
+      </section>
+
+      <!-- Meny -->
+      <!-- Kontaktformulär -->
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <section class="footer-column">
+          <h2 class="sr-only">Zuprême</h2>
+
+          <a class="brand" href="/" aria-label="Zuprême – startsida">
+            <img
+              class="brand-logo"
+              src="/logo.svg"
+              width="30"
+              height="30"
+              alt=""
+            />
+            <span class="site-name">Zuprême</span>
+          </a>
+
+          <p>L'Art de la Soupe</p>
+
+          <p class="footer-copy">
+            © 2026 Zuprême. Alla rättigheter förbehållna.
+          </p>
+        </section>
+
+        <section class="footer-column">
+          <h2>Besök</h2>
+
+          <address>
+            Rue de la Soupe 12<br />
+            111 22 Stockholm
+          </address>
+        </section>
+
+        <section class="footer-column">
+          <h2>Öppet</h2>
+
+          <dl class="opening-hours">
+            <dt>Måndag–söndag</dt>
+            <dd>11.00–02.00</dd>
+          </dl>
+        </section>
+
+        <section class="footer-column">
+          <h2>Information</h2>
+
+          <ul class="footer-link-list">
+            <li>
+              <a href="/accessibility.html">Tillgänglighetsredogörelse</a>
+            </li>
+            <li>
+              <a href="/terms.html">Villkor</a>
+            </li>
+            <li>
+              <a href="/privacy.html">Integritet</a>
+            </li>
+            <li>
+              <a href="/project.html">Projekt</a>
+            </li>
+          </ul>
+
+          <a
+            class="admin-login"
+            href="https://zupreme-restaurant-admin.sarasjodin.se"
+          >
+            <img src="/logo.svg" width="20" height="20" alt="" />
+            <span>Logga in</span>
+          </a>
+        </section>
+      </div>
+    </footer>
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
