@@ -98,17 +98,16 @@
           smakprofil.
         </p>
 
-        <!-- Vid hämtning av API-data -->
-        <p id="menu-loading" class="status-message">Menyn hämtas...</p>
-
-        <!-- Vid API-fel -->
-        <p id="menu-error" class="status-message" hidden>
-          Menyn kunde inte hämtas just nu.
-        </p>
+        <!-- Vid hämtning av API-data och API-fel -->
+        <p
+          id="menu-status"
+          class="status-message"
+          aria-live="polite"
+        ></p>
 
         <!-- Dynamisk rendering av kategorier och menyartiklar snart här -->
         <div id="menu-list" class="menu-list">
-          <!-- Hårdkodad layout för planering och styling -->
+        <!-- Hårdkodad layout för planering och styling -->
 
           <section class="menu-category">
             <h3>Förrätter</h3>
