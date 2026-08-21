@@ -74,7 +74,7 @@
           <p class="eyebrow">Om Zuprême</p>
           <h2>Fransk lantkänsla möter modern restaurang.</h2>
         </div>
-        <p>
+        <p class="section-intro">
           Zuprême är ett fiktivt soppkoncept där varje rätt presenteras med
           tydlig temperatur, styrka och visuell identitet. Menyn hämtas
           dynamiskt från ett API och kan uppdateras via ett skyddat adminsystem.
@@ -84,8 +84,621 @@
         </div>
       </section>
 
-      <!-- Meny -->
-      <!-- Kontaktformulär -->
+      <!-------------------------------->
+      <!--       MENY SEKTIONEN       -->
+      <!-------------------------------->
+      <section id="menu" class="section page-section menu-section">
+        <div class="section-heading">
+          <p class="eyebrow center">Notre Carte</p>
+          <h2>Vår meny</h2>
+        </div>
+
+        <p class="section-intro">
+          Här hittar du våra soppor med fransk elegans, modern meny och tydlig
+          smakprofil.
+        </p>
+
+        <!-- Vid hämtning av API-data -->
+        <p id="menu-loading" class="status-message">Menyn hämtas...</p>
+
+        <!-- Vid API-fel -->
+        <p id="menu-error" class="status-message" hidden>
+          Menyn kunde inte hämtas just nu.
+        </p>
+
+        <!-- Dynamisk rendering av kategorier och menyartiklar snart här -->
+        <div id="menu-list" class="menu-list">
+          <!-- Hårdkodad layout för planering och styling -->
+
+          <section class="menu-category">
+            <h3>Förrätter</h3>
+
+            <article class="menu-item">
+              <div class="menu-item-image-wrapper">
+                <img
+                  class="menu-item-image"
+                  src="/images/menu-items/burrata-med-tomat-och-basilika.webp"
+                  alt="Burrata med tomat och basilika"
+                />
+                <div class="ai-badge" aria-label="AI-genererad bild">
+                  <span class="ai">AI</span>
+                  <span class="generated">GENERERAD BILD</span>
+                </div>
+              </div>
+
+              <div class="menu-item-content">
+                <h4>Burrata med tomat & basilika</h4>
+                <p>Burrata • Tomat • Basilika • Olivolja • Hårdkodat data</p>
+              </div>
+
+              <div class="menu-item-meta">
+                <span class="menu-serving">Portion</span>
+                <span class="menu-price">165 kr</span>
+              </div>
+            </article>
+            <article class="menu-item">
+              <div class="menu-item-image-wrapper">
+                <img
+                  class="menu-item-image"
+                  src="/images/menu-items/chevre-chaud-med-paron-och-valnot.webp"
+                  alt="Chèvre chaud med päron och valnöt"
+                />
+                <div class="ai-badge" aria-label="AI-genererad bild">
+                  <span class="ai">AI</span>
+                  <span class="generated">GENERERAD BILD</span>
+                </div>
+              </div>
+
+              <div class="menu-item-content">
+                <h4>Chèvre chaud med päron & valnöt</h4>
+                <p>
+                  Chèvre • Päron • Valnöt • Honung • Timjan • Hårdkodat data
+                </p>
+              </div>
+
+              <div class="menu-item-meta">
+                <span class="menu-serving">Portion</span>
+                <span class="menu-price">155 kr</span>
+              </div>
+            </article>
+            <article class="menu-item">
+              <div class="menu-item-image-wrapper">
+                <img
+                  class="menu-item-image"
+                  src="/images/menu-items/toast-skagen-a-la-zupreme.webp"
+                  alt="Toast Skagen à la Zuprême"
+                />
+                <div class="ai-badge" aria-label="AI-genererad bild">
+                  <span class="ai">AI</span>
+                  <span class="generated">GENERERAD BILD</span>
+                </div>
+              </div>
+
+              <div class="menu-item-content">
+                <h4>Toast Skagen à la Zuprême</h4>
+                <p>Räkor • Dill • Citron • Brioche • Löjrom • Hårdkodat data</p>
+              </div>
+
+              <div class="menu-item-meta">
+                <span class="menu-serving">Portion</span>
+                <span class="menu-price">175 kr</span>
+              </div>
+            </article>
+          </section>
+          <section class="menu-category">
+            <h3>Soppor</h3>
+
+            <article class="menu-item">
+              <div class="menu-item-image-wrapper">
+                <img
+                  class="menu-item-image"
+                  src="/images/menu-items/kramig-tomatsoppa.webp"
+                  alt="Tomatsoppa"
+                />
+                <div class="ai-badge" aria-label="AI-genererad bild">
+                  <span class="ai">AI</span>
+                  <span class="generated">GENERERAD BILD</span>
+                </div>
+              </div>
+
+              <div class="menu-item-content">
+                <h4>Tomatsoppa</h4>
+                <p>Tomat • Grädde • Basilika • Vitlök • Hårdkodat data</p>
+              </div>
+
+              <div class="menu-item-meta">
+                <span class="menu-serving">Portion</span>
+                <span class="menu-price">165 kr</span>
+              </div>
+            </article>
+            <article class="menu-item">
+              <div class="menu-item-image-wrapper">
+                <img
+                  class="menu-item-image"
+                  src="/images/menu-items/soupe-a-loignon-gratinee.webp"
+                  alt="Soupe à l’oignon gratinée"
+                />
+                <div class="ai-badge" aria-label="AI-genererad bild">
+                  <span class="ai">AI</span>
+                  <span class="generated">GENERERAD BILD</span>
+                </div>
+              </div>
+
+              <div class="menu-item-content">
+                <h4>Soupe à l’oignon gratinée</h4>
+                <p>
+                  Gul lök • Oxbuljong • Gruyère • Timjan • Surdegsbröd •
+                  Hårdkodat data
+                </p>
+              </div>
+
+              <div class="menu-item-meta">
+                <span class="menu-serving">Skål</span>
+                <span class="menu-price">175 kr</span>
+              </div>
+            </article>
+            <article class="menu-item">
+              <div class="menu-item-image-wrapper">
+                <img
+                  class="menu-item-image"
+                  src="/images/menu-items/kramig-kantarellsoppa.webp"
+                  alt="Krämig kantarellsoppa"
+                />
+                <div class="ai-badge" aria-label="AI-genererad bild">
+                  <span class="ai">AI</span>
+                  <span class="generated">GENERERAD BILD</span>
+                </div>
+              </div>
+
+              <div class="menu-item-content">
+                <h4>Krämig kantarellsoppa</h4>
+                <p>
+                  Kantareller • Grädde • Schalottenlök • Timjan • Brynt smör •
+                  Hårdkodat data
+                </p>
+              </div>
+
+              <div class="menu-item-meta">
+                <span class="menu-serving">Skål</span>
+                <span class="menu-price">185 kr</span>
+              </div>
+            </article>
+            <article class="menu-item">
+              <div class="menu-item-image-wrapper">
+                <img
+                  class="menu-item-image"
+                  src="/images/menu-items/tom-kha-gai.webp"
+                  alt="Tom kha gai"
+                />
+                <div class="ai-badge" aria-label="AI-genererad bild">
+                  <span class="ai">AI</span>
+                  <span class="generated">GENERERAD BILD</span>
+                </div>
+              </div>
+
+              <div class="menu-item-content">
+                <h4>Tom kha gai</h4>
+                <p>
+                  Kyckling • Kokosmjölk • Citrongräs • Lime • Chili • Koriander
+                  • Hårdkodat data
+                </p>
+              </div>
+
+              <div class="menu-item-meta">
+                <span class="menu-serving">Skål</span>
+                <span class="menu-price">185 kr</span>
+              </div>
+            </article>
+          </section>
+          <section class="menu-category">
+            <h3>Varmrätter</h3>
+
+            <article class="menu-item">
+              <div class="menu-item-image-wrapper">
+                <img
+                  class="menu-item-image"
+                  src="/images/menu-items/bouillabaisse-zupreme.webp"
+                  alt="Bouillabaisse Zuprême"
+                />
+                <div class="ai-badge" aria-label="AI-genererad bild">
+                  <span class="ai">AI</span>
+                  <span class="generated">GENERERAD BILD</span>
+                </div>
+              </div>
+
+              <div class="menu-item-content">
+                <h4>Bouillabaisse Zuprême</h4>
+                <p>
+                  Fisk • Räkor • Musslor • Tomat • Saffran • Rouille • Hårdkodat
+                  data
+                </p>
+              </div>
+
+              <div class="menu-item-meta">
+                <span class="menu-serving">Stor skål</span>
+                <span class="menu-price">295 kr</span>
+              </div>
+            </article>
+            <article class="menu-item">
+              <div class="menu-item-image-wrapper">
+                <img
+                  class="menu-item-image"
+                  src="/images/menu-items/pho-bo.webp"
+                  alt="Phở bò"
+                />
+                <div class="ai-badge" aria-label="AI-genererad bild">
+                  <span class="ai">AI</span>
+                  <span class="generated">GENERERAD BILD</span>
+                </div>
+              </div>
+
+              <div class="menu-item-content">
+                <h4>Phở bò</h4>
+                <p>
+                  Nötkött • Risnudlar • Ingefära • Stjärnanis • Lime • Örter •
+                  Hårdkodat data
+                </p>
+              </div>
+
+              <div class="menu-item-meta">
+                <span class="menu-serving">Stor skål</span>
+                <span class="menu-price">245 kr</span>
+              </div>
+            </article>
+            <article class="menu-item">
+              <div class="menu-item-image-wrapper">
+                <img
+                  class="menu-item-image"
+                  src="/images/menu-items/grillad-oxfile-med-rodvinssas.webp"
+                  alt="Grillad oxfilé med rödvinssås"
+                />
+                <div class="ai-badge" aria-label="AI-genererad bild">
+                  <span class="ai">AI</span>
+                  <span class="generated">GENERERAD BILD</span>
+                </div>
+              </div>
+
+              <div class="menu-item-content">
+                <h4>Grillad oxfilé med rödvinssås</h4>
+                <p>
+                  Oxfilé • Rödvinssås • Potatis • Grönsaker • Hårdkodat data
+                </p>
+              </div>
+
+              <div class="menu-item-meta">
+                <span class="menu-serving">Portion</span>
+                <span class="menu-price">365 kr</span>
+              </div>
+            </article>
+            <article class="menu-item">
+              <div class="menu-item-image-wrapper">
+                <img
+                  class="menu-item-image"
+                  src="/images/menu-items/confit-de-canard.webp"
+                  alt="Confit de canard"
+                />
+                <div class="ai-badge" aria-label="AI-genererad bild">
+                  <span class="ai">AI</span>
+                  <span class="generated">GENERERAD BILD</span>
+                </div>
+              </div>
+
+              <div class="menu-item-content">
+                <h4>Confit de canard</h4>
+                <p>
+                  Anklår • Potatis • Haricots verts • Apelsin • Rödvinssky •
+                  Hårdkodat data
+                </p>
+              </div>
+
+              <div class="menu-item-meta">
+                <span class="menu-serving">Portion</span>
+                <span class="menu-price">345 kr</span>
+              </div>
+            </article>
+            <article class="menu-item">
+              <div class="menu-item-image-wrapper">
+                <img
+                  class="menu-item-image"
+                  src="/images/menu-items/risotto-ai-funghi.webp"
+                  alt="Risotto ai funghi"
+                />
+                <div class="ai-badge" aria-label="AI-genererad bild">
+                  <span class="ai">AI</span>
+                  <span class="generated">GENERERAD BILD</span>
+                </div>
+              </div>
+
+              <div class="menu-item-content">
+                <h4>Risotto ai funghi</h4>
+                <p>
+                  Arborioris • Karljohanssvamp • Parmesan • Vitt vin • Timjan •
+                  Hårdkodat data
+                </p>
+              </div>
+
+              <div class="menu-item-meta">
+                <span class="menu-serving">Portion</span>
+                <span class="menu-price">255 kr</span>
+              </div>
+            </article>
+          </section>
+          <section class="menu-category">
+            <h3>Efterrätter</h3>
+
+            <article class="menu-item">
+              <div class="menu-item-image-wrapper">
+                <img
+                  class="menu-item-image"
+                  src="/images/menu-items/tarte-tatin.webp"
+                  alt="Tarte Tatin"
+                />
+                <div class="ai-badge" aria-label="AI-genererad bild">
+                  <span class="ai">AI</span>
+                  <span class="generated">GENERERAD BILD</span>
+                </div>
+              </div>
+
+              <div class="menu-item-content">
+                <h4>Tarte Tatin</h4>
+                <p>
+                  Karamelliserat äpple • Smördeg • Vanilj • Crème fraîche •
+                  Hårdkodat data
+                </p>
+              </div>
+
+              <div class="menu-item-meta">
+                <span class="menu-serving">Portion</span>
+                <span class="menu-price">155 kr</span>
+              </div>
+            </article>
+            <article class="menu-item">
+              <div class="menu-item-image-wrapper">
+                <img
+                  class="menu-item-image"
+                  src="/images/menu-items/hjortron-och-vanilj.webp"
+                  alt="Hjortron & vanilj"
+                />
+                <div class="ai-badge" aria-label="AI-genererad bild">
+                  <span class="ai">AI</span>
+                  <span class="generated">GENERERAD BILD</span>
+                </div>
+              </div>
+
+              <div class="menu-item-content">
+                <h4>Hjortron & vanilj</h4>
+                <p>
+                  Hjortron • Vaniljkräm • Havrecrumble • Vit choklad • Hårdkodat
+                  data
+                </p>
+              </div>
+
+              <div class="menu-item-meta">
+                <span class="menu-serving">Portion</span>
+                <span class="menu-price">145 kr</span>
+              </div>
+            </article>
+            <article class="menu-item">
+              <div class="menu-item-image-wrapper">
+                <img
+                  class="menu-item-image"
+                  src="/images/menu-items/creme-brulee.webp"
+                  alt="Crème brûlée"
+                />
+                <div class="ai-badge" aria-label="AI-genererad bild">
+                  <span class="ai">AI</span>
+                  <span class="generated">GENERERAD BILD</span>
+                </div>
+              </div>
+
+              <div class="menu-item-content">
+                <h4>Crème brûlée</h4>
+                <p>Vaniljkräm • Karamelliserat socker • Hårdkodat data</p>
+              </div>
+
+              <div class="menu-item-meta">
+                <span class="menu-serving">Portion</span>
+                <span class="menu-price">145 kr</span>
+              </div>
+            </article>
+            <article class="menu-item">
+              <div class="menu-item-image-wrapper">
+                <img
+                  class="menu-item-image"
+                  src="/images/menu-items/chokladmousse-med-hallon.webp"
+                  alt="Chokladmousse med hallon"
+                />
+                <div class="ai-badge" aria-label="AI-genererad bild">
+                  <span class="ai">AI</span>
+                  <span class="generated">GENERERAD BILD</span>
+                </div>
+              </div>
+
+              <div class="menu-item-content">
+                <h4>Chokladmousse med hallon</h4>
+                <p>Chokladmousse • Hallon • Hårdkodat data</p>
+              </div>
+
+              <div class="menu-item-meta">
+                <span class="menu-serving">Portion</span>
+                <span class="menu-price">145 kr</span>
+              </div>
+            </article>
+          </section>
+          <section class="menu-category">
+            <h3>Drycker</h3>
+
+            <article class="menu-item">
+              <div class="menu-item-image-wrapper">
+                <img
+                  class="menu-item-image"
+                  src="/images/menu-items/yuzu-och-flader-spritz.webp"
+                  alt="Yuzu och fläder spritz"
+                />
+                <div class="ai-badge" aria-label="AI-genererad bild">
+                  <span class="ai">AI</span>
+                  <span class="generated">GENERERAD BILD</span>
+                </div>
+              </div>
+
+              <div class="menu-item-content">
+                <h4>Yuzu & fläder spritz</h4>
+                <p>
+                  Yuzu • Fläder • Citrus • Sodavatten • Rosmarin • Hårdkodat
+                  data
+                </p>
+              </div>
+
+              <div class="menu-item-meta">
+                <span class="menu-serving">Glas 25 cl</span>
+                <span class="menu-price">95 kr</span>
+              </div>
+            </article>
+            <article class="menu-item">
+              <div class="menu-item-image-wrapper">
+                <img
+                  class="menu-item-image"
+                  src="/images/menu-items/evian-kolsyrat-vatten.webp"
+                  alt="Evian kolsyrat vatten"
+                />
+                <div class="ai-badge" aria-label="AI-genererad bild">
+                  <span class="ai">AI</span>
+                  <span class="generated">GENERERAD BILD</span>
+                </div>
+              </div>
+
+              <div class="menu-item-content">
+                <h4>Evian kolsyrat vatten</h4>
+                <p>
+                  Mineralvatten från franska Alperna • Kolsyrat • 0,75 l •
+                  Hårdkodat data
+                </p>
+              </div>
+
+              <div class="menu-item-meta">
+                <span class="menu-serving">Flaska</span>
+                <span class="menu-price">25 kr</span>
+              </div>
+            </article>
+            <article class="menu-item">
+              <div class="menu-item-image-wrapper">
+                <img
+                  class="menu-item-image"
+                  src="/images/menu-items/husets-roda-vin.webp"
+                  alt="Husets röda vin"
+                />
+                <div class="ai-badge" aria-label="AI-genererad bild">
+                  <span class="ai">AI</span>
+                  <span class="generated">GENERERAD BILD</span>
+                </div>
+              </div>
+
+              <div class="menu-item-content">
+                <h4>Husets röda vin</h4>
+                <p>
+                  Rött vin • 15 cl • Cabernet Sauvignon • Merlot • Hårdkodat
+                  data
+                </p>
+              </div>
+
+              <div class="menu-item-meta">
+                <span class="menu-serving">Glas</span>
+                <span class="menu-price">125 kr</span>
+              </div>
+            </article>
+          </section>
+        </div>
+
+        <div class="cta">
+          <a class="button" href="#contact">Kontakta oss</a>
+        </div>
+      </section>
+
+      <!-------------------------------->
+      <!--   KONTAKTA OSS SEKTIONEN   -->
+      <!-------------------------------->
+      <section id="contact" class="section page-section contact-section">
+        <div class="section-heading">
+          <p class="eyebrow">Restons en contact</p>
+          <h2>Kontakt</h2>
+        </div>
+
+        <p class="section-intro">
+          Har du frågor om vår meny, öppettider eller vill komma i kontakt med
+          oss?<br />Skicka gärna ett meddelande.
+        </p>
+
+        <div class="contact-layout">
+          <div class="contact-info">
+            <h3>Kontakta oss</h3>
+            <p>På telefon: <a href="tel:+46812345678">+46 8 123 456 78</a></p>
+            <p>
+              eller på e-post:
+              <a href="mailto:kontakt@zupreme-restaurant.se"
+                >kontakt@zupreme-restaurant.se</a
+              >
+            </p>
+          </div>
+
+          <form id="contact-form" class="contact-form">
+            <div class="form-field">
+              <label for="name">Namn</label>
+              <input
+                id="name"
+                name="name"
+                type="text"
+                maxlength="100"
+                autocomplete="name"
+                placeholder="Ange förnamn och efternamn"
+                required
+              />
+            </div>
+
+            <div class="form-field">
+              <label for="email">E-post</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                maxlength="254"
+                autocomplete="email"
+                placeholder="Ange din e-postadress, t.ex. namn.efternamn@domän.se"
+                required
+              />
+            </div>
+
+            <div class="form-field">
+              <label for="subject">Ämne</label>
+              <input
+                id="subject"
+                name="subject"
+                type="text"
+                maxlength="150"
+                placeholder="Ange kort vad ditt meddelande handlar om"
+                required
+              />
+            </div>
+
+            <div class="form-field">
+              <label for="message">Meddelande</label>
+              <textarea
+                id="message"
+                name="message"
+                maxlength="1000"
+                placeholder="Skriv ditt meddelande här..."
+                rows="6"
+                required
+              ></textarea>
+            </div>
+
+            <button class="button contact-submit" type="submit">
+              Skicka meddelande
+            </button>
+
+            <p id="form-status" class="status-message" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
     </main>
 
     <footer class="site-footer">
@@ -118,6 +731,11 @@
             Rue de la Soupe 12<br />
             111 22 Stockholm
           </address>
+
+          <h2>E-post</h2>
+          <a href="mailto:kontakt@zupreme-restaurant.se">
+            kontakt@zupreme-restaurant.se
+          </a>
         </section>
 
         <section class="footer-column">
@@ -127,6 +745,9 @@
             <dt>Måndag–söndag</dt>
             <dd>11.00–02.00</dd>
           </dl>
+
+          <h2>Telefon</h2>
+          <a href="tel:+46812345678">+46 8 123 456 78</a>
         </section>
 
         <section class="footer-column">
