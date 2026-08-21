@@ -2,8 +2,8 @@
 
 Publik webbplats för <a href="https://zupreme-restaurant.netlify.app/">restaurangen Zuprême.</a>
 
-<img src="" alt="Alt text" width="72%">
-<img src="" alt="Alt text" width="24%">
+<img width="72%" src="https://github.com/user-attachments/assets/3c156c51-7207-4d1c-ab74-de44cb9929fb" />
+<img width="24%" src="https://github.com/user-attachments/assets/9d8af83f-a7b2-4c92-a4c9-8ba6704d0189" />
 
 Webbplatsen presenterar restaurangen, hämtar den aktuella menyn dynamiskt från Zuprêmes REST API och erbjuder ett kontaktformulär för att skicka meddelanden till restaurangen.
 
