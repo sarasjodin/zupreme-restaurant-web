@@ -1,14 +1,16 @@
 {
   "name": "zupreme-restaurant-web",
-  "version": "0.0.0",
+  "version": "0.2.0",
   "private": true,
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "format": "prettier --write ."
   },
   "devDependencies": {
+    "prettier": "^3.9.6",
     "vite": "^8.2.0"
   }
 }
