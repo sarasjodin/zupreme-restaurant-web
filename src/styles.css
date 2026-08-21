@@ -10,9 +10,9 @@
 
 /* Global styles */
 :root {
-  --font-display: 'Cormorant Garamond', serif;
-  --font-body: 'Inter', sans-serif;
-  --font-heading: 'Playfair Display', serif;
+  --font-display: "Cormorant Garamond", serif;
+  --font-body: "Inter", sans-serif;
+  --font-heading: "Playfair Display", serif;
 
   --gold: #d5a85f;
 
@@ -230,7 +230,7 @@ a {
   flex-wrap: wrap;
 }
 
-.footer-links span:not([aria-hidden='true']) {
+.footer-links span:not([aria-hidden="true"]) {
   cursor: default;
   color: var(--color-muted);
   opacity: 0.75;
@@ -416,12 +416,12 @@ footer .footer-copy {
   color: var(--gold);
 }
 
-.nav-menu a[aria-current='page'] {
+.nav-menu a[aria-current="page"] {
   font-weight: 700;
 }
 
-.nav-menu a[aria-current='page']::after {
-  content: '';
+.nav-menu a[aria-current="page"]::after {
+  content: "";
   display: block;
   height: 1px;
   width: 100%;
@@ -512,6 +512,7 @@ footer .footer-copy {
 }
 
 .menu-item-content {
+  flex: 1;
   padding: 1.25rem 1.25rem 0.8rem 1.25rem;
 }
 
@@ -611,9 +612,41 @@ footer .footer-copy {
   margin: 0;
 }
 
-#menu-error {
-  font-weight: 600;
+.status-message {
+  display: none;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  font-size: 1rem;
 }
+.status-message:not(:empty) {
+  display: block;
+}
+
+/* Varianter ska stå EFTER basregeln */
+.status-message.info,
+.status-message.loading {
+  background-color: #e7f3ff;
+  border: 1px solid #b6dcff;
+}
+.status-message.success {
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  color: #155724;
+}
+.status-message.error {
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  color: #ae3d1b;
+}
+
+/* Not utilized yet, but can be used for warning messages in the future */
+
+/* .status-message.warning {
+  background: #fff3cd;
+  border: 1px solid #ffeeba;
+  color: #6b5206;
+} */
 
 .contact-section {
   display: flex;
