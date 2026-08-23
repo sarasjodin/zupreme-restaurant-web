@@ -6,7 +6,10 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(import.meta.dirname, 'index.html'),
-        accessibility: resolve(import.meta.dirname, 'accessibility.html')
+        accessibility: resolve(__dirname, 'accessibility.html'),
+        terms: resolve(__dirname, 'terms.html'),
+        privacy: resolve(__dirname, 'privacy.html'),
+        project: resolve(__dirname, 'project.html')
       }
     }
   }
