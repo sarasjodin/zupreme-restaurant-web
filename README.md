@@ -1,11 +1,11 @@
 # Zuprême Restaurant Web
 
-Publik webbplats för <a href="https://zupreme-restaurant.netlify.app/">restaurangen Zuprême.</a>
+[![Netlify Status](https://api.netlify.com/api/v1/badges/94262520-4b9a-444e-b51d-9aa9240494e4/deploy-status)](https://app.netlify.com/projects/zupreme-restaurant/deploys) Publik webbplats för <a href="https://zupreme-restaurant.netlify.app/">restaurangen Zuprême.</a>
 
 <img width="72%" src="https://github.com/user-attachments/assets/3c156c51-7207-4d1c-ab74-de44cb9929fb" />
 <img width="24%" src="https://github.com/user-attachments/assets/9d8af83f-a7b2-4c92-a4c9-8ba6704d0189" />
 
-Webbplatsen presenterar restaurangen, hämtar den aktuella menyn dynamiskt från Zuprêmes REST API och erbjuder ett kontaktformulär för att skicka meddelanden till restaurangen.
+Webbplatsen presenterar restaurangen och hämtar menyn dynamiskt från Zuprêmes REST-API. API:t stödjer även full CRUD för kontaktmeddelanden, men den publika implementationen av kontaktformuläret återstår.
 
 ---
 
@@ -24,10 +24,11 @@ Projektet är utvecklat som en del av ett utbildningsprojekt inom webbutveckling
 - Responsiv mobile-first-layout
 - Dynamisk restaurangmeny hämtad från REST API
 - Meny grupperad efter kategori
-- Kontaktformulär kopplat till REST API
 - Länk till separat administrationsgränssnitt
 - Semantisk HTML och tillgänglig navigation
 - Tillgängliga formulär med labels och statusmeddelanden
+
+- Framtida implementation:: Kontaktformulär kopplat till REST API
 
 ---
 
@@ -50,30 +51,40 @@ Projektet är utvecklat som en del av ett utbildningsprojekt inom webbutveckling
 
 ## Installation
 
-Klona repositoryt och installera projektets dependencies:
+Klona repositoryt, gå till projektmappen och installera projektets dependencies:
 
 ```bash
+git clone <repository-url>
+cd zupreme-restaurant-web
 npm install
-```
 
-### Starta utvecklingsservern
+## Utveckling och publicering
 
-`npm run dev` (vite)
+| Del | Lokalt | Produktion |
+| --- | --- | --- |
+| Publik webbplats | `http://localhost:5173` | https://zupreme-restaurant.netlify.app |
+| Admin | `http://127.0.0.1:5501` | https://zupreme-restaurant-admin.sarasjodin.se |
+| REST API | `http://localhost:3001/api` | https://zupreme-restaurant-api.sarasjodin.se/api |
 
-???
+### Kommandon för den publika webbplatsen
 
-### Bygg för produktion
+| Kommando | Funktion |
+| --- | --- |
+| `npm run dev` | Startar Vite lokalt |
+| `npm run build` | Skapar produktionsbuild i `dist` |
+| `npm run preview` | Förhandsgranskar produktionsbuilden |
+| `npm run format` | Formaterar projektet med Prettier |
 
-`npm run build` (vite build)
+## Relaterade repositoryn
 
-### Förhandsgranska produktionsbuild
+| Repository | Funktion | Lokal körning |
+| --- | --- | --- |
+| `zupreme-restaurant-web` | Publik webbplats | Vite med `npm run dev` |
+| `zupreme-restaurant-api` | REST API + MySQL | Docker Compose |
+| `zupreme-restaurant-admin` | Administrationsgränssnitt | Lokal webbserver / Live Server |
 
-`npm run preview` (vite preview)
-
-### Formatera kod
-
-`npm run format` (prettier --write .)
-Kör Prettier för projektets filer
+Den publika webbplatsen är beroende av `zupreme-restaurant-api` för dynamisk menydata.
+API:t använder MySQL för datalagring.
 
 ---
 
@@ -90,27 +101,6 @@ POST <a href="https://zupreme-restaurant-api.sarasjodin.se/api/messages">/api/me
 ### API-basadress
 
 `https://zupreme-restaurant-api.sarasjodin.se/api`
-
-### Endpoints
-
-| Method | Endpoint      | Beskrivning                      |
-| ------ | ------------- | -------------------------------- |
-| `GET`  | `/menu-items` | Hämtar tillgängliga menyartiklar |
-| `POST` | `/messages`   | Skickar ett kontaktmeddelande    |
-
----
-
-## Deployment
-
-Webbplatsen byggs med Vite och publiceras som en statisk webbplats.
-Produktionsbuild skapas med:
-
-```bash
-npm run build
-```
-
-Webbplatsen är publicerad via Netlify:
-`https://zupreme-restaurant.netlify.app/`
 
 ---
 
