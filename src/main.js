@@ -12,7 +12,6 @@ const menuLinks = document.querySelectorAll('.nav-menu a');
 
 // Toggle navigation menu
 if (menuToggle && mainNav) {
-
   // Lyssna på klick på menyknappen
   menuToggle.addEventListener('click', () => {
     // Toggle class 'is-open' på main-nav
@@ -79,17 +78,12 @@ async function getMenuItems() {
 
     // Returnera menyartiklarna
     return menuItems;
-
   } catch (error) {
     // Det tekniska felet visas endast i webbläsarens console
     console.error('Could not fetch menu items:', error);
-    
+
     // Användaren får ett generellt felmeddelande i #menu-status
-    showMessage(
-      'menu-status',
-      'Menyn kunde inte hämtas just nu.',
-      'error'
-    );
+    showMessage('menu-status', 'Menyn kunde inte hämtas just nu.', 'error');
 
     return null; // Returnera null för att indikera att hämtningen misslyckades
   }
@@ -104,7 +98,7 @@ const categoryImages = {
   Soppor: '/images/menu-categories/soppa.webp',
   Varmrätter: '/images/menu-categories/varmratt.webp',
   Efterrätter: '/images/menu-categories/efterratt.webp',
-  Drycker: '/images/menu-categories/dryck.webp',
+  Drycker: '/images/menu-categories/dryck.webp'
 };
 
 // --------------------------------------------------
@@ -120,14 +114,14 @@ function renderMenu(menuItems) {
   menuList.replaceChildren();
 
   if (menuItems.length === 0) {
-  showMessage(
-    'menu-status',
-    'Det finns inga menyartiklar att visa just nu.',
-    'info'
-  );
+    showMessage(
+      'menu-status',
+      'Det finns inga menyartiklar att visa just nu.',
+      'info'
+    );
 
-  return;
-}
+    return;
+  }
 
   // Gruppera menyartiklar efter kategori
   const categories = new Map();
@@ -183,14 +177,12 @@ function createMenuItem(item) {
   image.className = 'menu-item-image';
 
   // Använd image_path om det finns, annars använd standardbild för kategorin
-  image.src =
-  item.image_path ?? categoryImages[item.category_name];
+  image.src = item.image_path ?? categoryImages[item.category_name];
   image.alt = '';
 
   // Skapa badge
   const badge = document.createElement('div');
   badge.className = 'ai-badge';
-  badge.setAttribute('aria-label', 'AI-genererad bild');
 
   // Skapa textinnehåll för badge
   const ai = document.createElement('span');
@@ -257,14 +249,13 @@ async function init() {
   // Hämta menyartiklar från API och rendera dem på webbsidan
   const menuItems = await getMenuItems();
 
-    if (menuItems === null) return; // Om hämtningen misslyckades, avbryt initieringen
+  if (menuItems === null) return; // Om hämtningen misslyckades, avbryt initieringen
 
   // Rendera menyartiklarna på webbsidan
   renderMenu(menuItems);
 }
 
 init();
-
 
 // --------------------------------------------------
 // Send message - Skicka meddelande från kontaktformulär
