@@ -57,6 +57,9 @@ Klona repositoryt, gå till projektmappen och installera projektets dependencies
 git clone <repository-url>
 cd zupreme-restaurant-web
 npm install
+```
+
+---
 
 ## Utveckling och publicering
 
